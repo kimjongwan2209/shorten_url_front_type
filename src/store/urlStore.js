@@ -8,8 +8,7 @@ class UrlStore {
   }
 
   setShortenUrl(newShortenUrl) {
-    console.log('setShortenUrl is called with:', newShortenUrl);
-    this.shortenUrl = newShortenUrl;
+    this.shortenUrl = newShortenUrl
   }
 }
 

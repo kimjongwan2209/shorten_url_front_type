@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router';
-import { LayoutMainBox, ButtonText,Encase, Button} from '../../styles/main'
+import { LayoutMainBox, Encase } from '../../styles/main'
+import { MainButton, MainButtonText } from '../../styles/button';
 import { LoveMain, MainText } from '@/src/styles/hidden';
 export default function Url() {
     const router = useRouter();
@@ -32,11 +33,11 @@ export default function Url() {
                 </MainText>
 
                 <Encase>
-                    <Button onClick={gotoBack}>
-                        <ButtonText>
+                    <MainButton onClick={gotoBack}>
+                        <MainButtonText>
                             뒤로가기
-                        </ButtonText>
-                    </Button>
+                        </MainButtonText>
+                    </MainButton>
                 </Encase>
             </LayoutMainBox>
         </LoveMain>

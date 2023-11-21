@@ -8,6 +8,13 @@ export const TextContainer = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        border: 2px solid #83dcb7;
+
+        @media (max-width: 768px) {
+                width: 90%;
+                height: 15vh;
+
+    }
 `
 
 export const UrlDiv = styled.div`
@@ -25,9 +32,23 @@ export const ButtonDiv = styled.div`
         display:flex;
         align-items: center;
         justify-content: space-evenly;
+        
+        @media (max-width: 768px) {
+                width: 65%;
+                height: 20%;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+    }
+
 `
 
 export const UrlTextSpan = styled.span`
         font-size: 2vw;
         font-weight: 500;
+        
+        @media (max-width: 768px) {
+                font-size: 100%;
+                font-weight: 600;
+    }
 `

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router';
 import UrlText from '../../components/UrlText';
-import {MainContainer, LayoutMainBox, ButtonText,Encase, Button} from '../../styles/main'
+import { MainContainer, LayoutMainBox } from '../../styles/main';
+import { ButtonEncase, MainButton,MainButtonText } from '@/src/styles/button';
 
 export default function Url() {
     const router = useRouter();
@@ -12,17 +13,17 @@ export default function Url() {
     return (
         <MainContainer>
             <LayoutMainBox>
-                <ButtonText>
+                <MainButtonText>
                    나의 Shorten url
-                </ButtonText>
+                </MainButtonText>
                 <UrlText />
-                <Encase>
-                    <Button onClick={gotoBack}>
-                        <ButtonText>
+                <ButtonEncase>
+                    <MainButton onClick={gotoBack}>
+                        <MainButtonText>
                             다시 만들기
-                        </ButtonText>
-                    </Button>
-                </Encase>
+                        </MainButtonText>
+                    </MainButton>
+                </ButtonEncase>
             </LayoutMainBox>
         </MainContainer>
   )

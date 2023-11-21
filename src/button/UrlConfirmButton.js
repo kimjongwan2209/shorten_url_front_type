@@ -1,11 +1,12 @@
 import axios from "axios";
 import { observer } from 'mobx-react';
 import { useRouter } from "next/router";
-import { Button, Encase, ButtonText } from '../../src/styles/main'
+import { MainButton, MainButtonText } from "../styles/button";
+import { Encase } from "../styles/main";
 import store from "../store";
 
 
-const UrlConfirmButton =observer(({ urlAddress }) => {
+const UrlConfirmButton = observer(({ urlAddress }) => {
     const urlAddressPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*\.[^\s]{2,}(\/|$)/;
     const router = useRouter();
     const { urlStore } = store;
@@ -20,11 +21,10 @@ const UrlConfirmButton =observer(({ urlAddress }) => {
                 
                 const response = await axios.post
                     (process.env.NEXT_PUBLIC_API_POSTKEY,
-                        { url: urlAddress }
+                        { originalUrl: urlAddress }
                     );
-                
                 console.log("무랑", response)
-                const newShortenUrl = response.data.getNewUrl;
+                const newShortenUrl = response.data.originalUrl;
                 console.log("뉴",newShortenUrl)
                 urlStore.setShortenUrl(newShortenUrl);
                 router.push('/url');
@@ -41,11 +41,11 @@ const UrlConfirmButton =observer(({ urlAddress }) => {
     return (
         <div>
             <Encase>
-                <Button onClick={() => checkedUrl()}>
-                    <ButtonText>
+                <MainButton onClick={() => checkedUrl()}>
+                    <MainButtonText>
                         Url 생성하기
-                    </ButtonText>
-                </Button>
+                    </MainButtonText>
+                </MainButton>
             </Encase>
         </div>
     )

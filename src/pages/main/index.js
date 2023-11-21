@@ -1,14 +1,15 @@
 import Head from 'next/head'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import UrlConfirmButton from '../../button/UrlConfirmButton';
-import { MainContainer, UrlText, InputBox, Encase, LayoutMainBox, HiddenButton } from '../../styles/main'
+import { MainContainer, UrlText, InputBox, Encase, LayoutMainBox } from '../../styles/main';
+import { HiddenButton } from '@/src/styles/button';
+import { observer } from 'mobx-react';
 
 
-export default function Home() {
+function Home () {
   const router = useRouter();
   const [inputValue, setinputValue] = useState('');
-  console.log("", inputValue);
 
   const gotoHidden = () => {
     router.push("/hidden")
@@ -22,16 +23,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContainer>
-        <HiddenButton onClick={gotoHidden}/>
+        <HiddenButton onClick={gotoHidden} />
         <LayoutMainBox>
           <Encase>
             <UrlText>Free Shorten url 생성기</UrlText>
           </Encase>
           <Encase>
             <InputBox
-                type='text'
-                value={inputValue}
-                onChange={(e) => setinputValue(e.target.value)}
+              type='text'
+              value={inputValue}
+              onChange={(e) => setinputValue(e.target.value)}
             />
           </Encase>
           <UrlConfirmButton urlAddress={inputValue} />
@@ -39,4 +40,6 @@ export default function Home() {
       </MainContainer>
     </>
   );
-}
+};
+
+export default observer(Home)

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Button, ButtonText } from '../styles/main'
-import { Top ,CustomQrModal, QrBox, CloseButton } from "../styles/customModal";
+import { UrlButtonText,UrlButtonMedia } from "../styles/button";
+import { CustomQrModal, QrBox, CloseButton } from "../styles/customModal";
 import QRCode from "qrcode.react";
-import urlStore from "../store/urlStore";
 
 const UrlQrCodeChangeButton = (propshortenUrl) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,11 +16,11 @@ const UrlQrCodeChangeButton = (propshortenUrl) => {
     
     return (
         <div>
-             <Button onClick={openModal}>
-                <ButtonText>
+             <UrlButtonMedia onClick={openModal}>
+                <UrlButtonText>
                     QR코드 보기
-                </ButtonText>
-            </Button>
+                </UrlButtonText>
+            </UrlButtonMedia>
                 <CustomQrModal
                     isOpen={isModalOpen}
                     onRequestClose={closeModal}
