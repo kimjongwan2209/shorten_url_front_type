@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router';
 import UrlText from '../../components/UrlText';
 import { MainContainer, LayoutMainBox } from '../../styles/main';
-import { ButtonEncase, MainButton,MainButtonText } from '@/src/styles/button';
+import { ButtonEncase, MainButton,MainButtonText } from '../../styles/button';
 
 export default function Url() {
     const router = useRouter();

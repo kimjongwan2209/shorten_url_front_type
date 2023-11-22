@@ -1,13 +1,13 @@
 import { makeAutoObservable } from 'mobx';
 
 class UrlStore {
-  shortenUrl = '';
+  shortenUrl : String = '';
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  setShortenUrl(newShortenUrl) {
+  setShortenUrl(newShortenUrl :String) {
     this.shortenUrl = newShortenUrl
   }
 }

@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import UrlConfirmButton from '../../button/UrlConfirmButton';
+import UrlConfirmButton from '../../buttons/UrlConfirmButton';
 import { MainContainer, UrlText, InputBox, Encase, LayoutMainBox } from '../../styles/main';
-import { HiddenButton } from '@/src/styles/button';
+import { HiddenButton } from '../../styles/button';
 import { observer } from 'mobx-react';
 
 
-function Home () {
+function Main () {
   const router = useRouter();
   const [inputValue, setinputValue] = useState('');
 
@@ -42,4 +42,4 @@ function Home () {
   );
 };
 
-export default observer(Home)
+export default observer(Main)

@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router';
 import { LayoutMainBox, Encase } from '../../styles/main'
 import { MainButton, MainButtonText } from '../../styles/button';
-import { LoveMain, MainText } from '@/src/styles/hidden';
+import { LoveMain, MainText } from '../../styles/hidden'
 export default function Url() {
     const router = useRouter();
 

@@ -3,13 +3,12 @@ import { useState } from 'react';
 const useCopyClipBoard = () => {
   const [isCopy, setIsCopy] = useState(false);
 
-  const onCopy = async (text) => {
+  const onCopy = async (text:string) => {
     try {
       await navigator.clipboard.writeText(text);
       setIsCopy(true);
       return true;
     } catch (error) {
-      console.error(error);
       setIsCopy(false);
 
       return false;
