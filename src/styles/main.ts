@@ -1,13 +1,18 @@
 import styled from "@emotion/styled";
+import { getRandomColor } from "../utils/BackgroundRandomColor";
 
-export const MainContainer = styled.div`
+type MainContainerProps = {
+  backgroundColor?: string;
+};
+
+export const MainContainer = styled.div<MainContainerProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
-    border:2px solid #ffd700;
+    height: 90vh;
+    background-color: ${(props) => props.backgroundColor || getRandomColor()};
 
     @media (max-width: 768px) {
         display: flex;
@@ -26,8 +31,6 @@ export const LayoutMainBox = styled.div`
     justify-content: center;
     width: 880px;
     height: 420px;
-    // margin:0px;
-    // padding:0px;
     background-color: #00cccc;
     box-shadow: 10px 10px black;
 

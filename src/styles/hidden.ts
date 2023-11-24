@@ -4,8 +4,9 @@ import { Main } from "next/document";
 
 export const LoveMain = styled.div`
     background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
-    height: 100vh;
+    height: 90vh;
     display: flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
 `;

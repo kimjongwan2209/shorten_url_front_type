@@ -1,7 +1,7 @@
 import React from 'react';
-import { UrlButton, UrlButtonText } from "../styles/button";
-import useCopyClipBoard from '../hooks/useCopyClipBoard';
-import { PropshortenUrlType } from '../types/type';
+import { UrlButton, UrlButtonText } from "../../styles/button";
+import useCopyClipBoard from '../../hooks/useCopyClipBoard';
+import { PropshortenUrlType } from '../../types/type';
 
 const UrlCopyClipboardButton: React.FC<PropshortenUrlType> = ({ propshortenUrl })=> {
     const [isCopy, onCopy] = useCopyClipBoard();

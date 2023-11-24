@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import QRCode from "qrcode.react";
-import { UrlButtonText,UrlButtonMedia } from "../styles/button";
-import { CustomQrModal, QrBox, CloseButton } from "../styles/customModal";
-import { PropshortenUrlType } from "../types/type";
+import { UrlButtonText,UrlButtonMedia } from "../../styles/button";
+import { CustomQrModal, QrBox, CloseButton } from "../../styles/customModal";
+import { PropshortenUrlType } from "../../types/type";
 
 
 const UrlQrCodeChangeButton : React.FC<PropshortenUrlType> = ({ propshortenUrl }) => {

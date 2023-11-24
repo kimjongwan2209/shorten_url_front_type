@@ -1,10 +1,10 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import { useRouter } from "next/router";
-import { MainButton, MainButtonText } from "../styles/button";
-import { Encase } from "../styles/main";
-import createShortenUrl from '../apis/urlApi';
-import store from "../store";
+import { MainButton, MainButtonText } from "../../styles/button";
+import { Encase } from "../../styles/main";
+import createShortenUrl from '../../apis/urlApi'
+import store from "../../store";
 
 
 const UrlConfirmButton = observer(({ urlAddress }: { urlAddress: string | '' })=> {

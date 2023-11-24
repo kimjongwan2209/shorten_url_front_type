@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import { useRouter } from "next/router";
-import UrlCopyClipboardButton from "../buttons/UrlCopyClipboardButton";
-import UrlQrCodeChangeButton from "../buttons/UrlQrCodeChangeButton";
+import UrlCopyClipboardButton from "../atoms/buttons/UrlCopyClipboardButton";
+import UrlQrCodeChangeButton from "../atoms/buttons/UrlQrCodeChangeButton";
 import {Encase} from '../styles/main'
 import { ButtonDiv, TextContainer, UrlDiv, UrlTextSpan } from "../styles/url";
 import { PropshortenUrlType } from "../types/type";

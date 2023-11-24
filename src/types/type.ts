@@ -7,3 +7,8 @@ export type PropshortenUrlType = {
 export type UrlProviderProps = {
   children: ReactNode;
 };
+
+export type ButtonProps = {
+  onClick?: () => void;
+  children?: React.ReactNode;
+};

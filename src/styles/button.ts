@@ -144,3 +144,32 @@ export const ButtonEncase = styled.div`
         margin-top: 10px;
     }
 `
+
+
+export const NavButtonStyle = styled.button`
+    width: 80px;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 900;
+    background: linear-gradient(to bottom, #CCCCCC, #999999);
+    color: white;
+    box-shadow: 2px 2px black;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 15px;
+    margin-left: 13px;
+    outline: none;
+    transition: background-color 0.1s, color 0.1s transform 0.3s;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+
+      &:hover{
+        cursor:pointer;
+        background-color: #000;
+        color: #fff;
+        transform: scale(1.05);
+    }
+`

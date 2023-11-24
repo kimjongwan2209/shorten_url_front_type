@@ -12,6 +12,9 @@ export default function Url() {
 
     return (
         <LoveMain>
+            <audio controls autoPlay>
+                <source src="/11-20.mp3" type="audio/mp3" />
+            </audio>
             <LayoutMainBox>
                 <MainText>
                     ┏───────────♡────────────┓ 
@@ -23,7 +26,7 @@ export default function Url() {
                    ┃*│ │* 사    랑    한    ㄷr*│ │*┃
                 </MainText>
                 <MainText>
-                    ┃*│w││e││c││o││d││e││.│*┃
+                    ┃*││ㅇ││4││9││기││ㅇ││*┃
                 </MainText>
                 <MainText>
                     ┃*└━┘└━┘└━┘└━┘└━┘└━┘└━┘*┃
